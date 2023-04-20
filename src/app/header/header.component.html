@@ -1,0 +1,56 @@
+<header id="header">
+    <!--header-->
+    <div class="header-middle">
+        <div class="container">
+            <div class="row header">
+                <div class="col-md-4 clearfix">
+                    <div class="row">
+                        <div class="circle">
+                            <img />
+                        </div>
+                        <div class="logo pull-left">
+                            <a class="logo-color" [routerLink]="['home']"><img src="images/home/logo.png" alt="" />
+                                FOODESOFT</a>
+                        </div>
+                        <div class="vl"></div>
+                    </div>
+                </div>
+                <div class="col-md-8 clearfix">
+                    <div class="shop-menu clearfix pull-right row ">
+                        <div class="login clearfix" *ngIf="isLoggedIn; else loggedOut">
+                            <div class="name">
+                                <i class="fa fa-user mr-2"></i>
+                                <span class="name-color">{{userName}}</span>
+                            </div>
+                            <div class="btn-group clearfix">
+                                <div class="btn-group">
+                                    <button type="button" (click)="logout()" class="btn btn-default btn-color"
+                                        data-toggle="dropdown">
+                                        Logout
+                                    </button>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <ng-template #loggedOut>
+                            <div class="btn-group login clearfix">
+                                <div class="btn-group">
+                                    <button type="button" (click)="navigateToLogin()" class="btn btn-default btn-color"
+                                        data-toggle="dropdown">
+                                        Register / Login
+                                    </button>
+                                </div>
+                            </div>
+                        </ng-template>
+                        
+                        
+                        <div class="cart-symbol"><a [routerLink]="['cart']" class="cart-color">
+                            <i class="fa fa-shopping-cart" style="font-size:30px"></i>
+                            <span class='badge badge-warning' id='lblCartCount'> {{count}} </span>
+                                </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

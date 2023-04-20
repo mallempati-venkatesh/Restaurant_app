@@ -1,0 +1,80 @@
+  <section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+              <li><a [routerLink]="['home']">Home</a></li>
+              <li class="active">Shopping Cart</li>
+            </ol>
+        </div>
+        <div class="table-responsive cart_info">
+            <table class="table table-condensed">
+                <thead>
+                    <tr class="cart_menu">
+                        <td class="image">Item</td>
+                        <td class="description"></td>
+                        <td class="price">Price</td>
+                        <td class="quantity">Quantity</td>
+                        <td class="total">Total</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody *ngIf="!emptyCart">
+                    <tr *ngFor="let cart of cart">
+                        <td class="cart_product mr-0">
+                           <img class="product-image" src="/assets/images/{{cart.image}}" alt="">
+                        </td>
+                        <td class="cart_description">
+                            <h4>{{cart.name| titlecase}}</h4>
+                        </td>
+                        <td class="cart_price">
+                            <p>${{cart.price}}</p>
+                        </td>
+                        <td class="cart_quantity">
+                            <div class="cart_quantity_button">
+                                <div class="cart_quantity_up" (click)="quantityUpdate(1,cart.id,cart.quantity)"> + </div>
+                                <input class="cart_quantity_input" type="text" name="quantity" value="{{cart.quantity}}" autocomplete="off" disabled size="2">
+                                <div class="cart_quantity_down" (click)="quantityUpdate(0,cart.id,cart.quantity)"> - </div>
+                            </div>
+                        </td>
+                        <td class="cart_total">
+                            <p class="cart_total_price">${{cart.price * cart.quantity}}</p>
+                        </td>
+                        <td class="cart_delete mt-3">
+                            <div class="cart_quantity_delete" (click)="deleteProduct(cart.id)"><i class="fa fa-times"></i></div>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="4">&nbsp;</td>
+                        <td colspan="2">
+                            <table class="table table-condensed total-result">
+                                <tr>
+                                    <td>Cart Sub Total</td>
+                                    <td>${{subTotal}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tax</td>
+                                    <td>${{tax}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td><span>${{total}}</span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">&nbsp;</td>
+                        <td colspan="2">
+                            <button class="btn btn-primary btn-checkout" (click)="navigateToCheckout()">Checkout</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody *ngIf="emptyCart">
+                    <tr class="">
+                        <td colspan="3"></td>
+                        <td>No Cart Items</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section> 

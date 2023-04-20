@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Biryani",
+        "price": 25,
+        "image": "biryani.jpg",
+        "category": 1
+    },
+    {
+        "name": "Chicken Lollipop",
+        "price": 30,
+        "image": "chicken_lollipop.jpg",
+        "category": 2
+    },
+    {
+        "name": "Haleem",
+        "price": 20,
+        "image": "haleem.jpg",
+        "category": 3
+    },
+    {
+        "name": "Burger",
+        "price": 15,
+        "image": "burger.jpg",
+        "category": 4
+    },
+    {
+        "name": "DOSA",
+        "price": 25,
+        "image": "dosa.png",
+        "category": 1
+    },
+    {
+        "name": "IDLI",
+        "price": 15,
+        "image": "idli.jpg",
+        "category": 2
+    },
+    {
+        "name": "ICE Cream",
+        "price": 10,
+        "image": "icecream.jpg",
+        "category": 1
+    },
+    {
+        "name": "Shawarma",
+        "price": 25,
+        "image": "shawarma.jpg",
+        "category": 2
+    }
+]

@@ -1,0 +1,150 @@
+.header-middle .container .header {
+    border-bottom: 1px solid #f5f5f5;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.container:before, .container:after {
+    display: table;
+    content: " ";
+}
+.logo-color {
+    color: #ff006e;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+
+}
+div.square {
+    border: solid 21px #ff006e;
+    width: 50px;
+    height: 50px;
+  }
+  div.circle {
+    -moz-border-radius: 50px/50px;
+    -webkit-border-radius: 50px 50px;
+    border-radius: 50px/50px;
+    border: solid 15px #ff006e;
+    width: 50px;
+    height: 50px;
+  }
+
+
+.header_top {
+    background: none repeat scroll 0 0 #F0F0E9;
+}
+
+.header-middle .container .row .col-sm-4 {
+    padding-left: 0;
+}
+
+.header-middle .container .row .col-sm-8 {
+    padding-right: 0;
+}
+
+.btn-group.open .dropdown-toggle {
+    background: rgba(0, 0, 0, 0);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+.shop-menu ul li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.shop-menu ul li:last-child {
+    padding-right: 0;
+}
+
+.shop-menu ul li a {
+    background: #FFFFFF;
+    color: #696763;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0;
+    padding-right: 0;
+    margin-top: 10px;
+}
+
+.shop-menu ul li a i {
+    margin-right: 3px;
+}
+
+.shop-menu ul li a:hover {
+    color: #ff006e;
+    background: #fff;
+}
+
+.header-bottom {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.navbar-collapse.collapse {
+    padding-left: 0;
+}
+
+.shop-menu ul li a.active {
+    background: none;
+    color: #ff006e;
+}
+
+.vl {
+    border-left: 2px solid #ccc;
+    height: 50px;
+    position: absolute;
+    left: 70%;
+    margin-left: -3px;
+    top: 0;
+  }
+  .btn-color {
+      color:#fff;
+      background-color: #ff006e;
+      font-weight: 500;
+  }
+.cart-symbol {
+      background-color: #ff006e;
+      font-weight: 500;
+      width: 50px;
+      height: 50px;
+}
+.cart-color {
+    color: white;
+    font-size: 38px;
+    margin-top: 21px;
+    margin-left: 4px;
+}
+.login {
+    margin-right: 50px;
+}
+#lblCartCount {
+    font-size: 12px;
+    background: #fff;
+    color: #333;
+    padding: 5px 5px;
+    margin-top: 2px;
+    vertical-align: top;
+    margin-left: -13px;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 12px;
+}
+.name {
+    display: inline;
+    margin-right: 20px;
+    font-weight: 500px;
+    font-size: 20px;
+}
+.name-color {
+    color: #ff006e;
+}

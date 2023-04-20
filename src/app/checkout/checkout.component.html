@@ -1,0 +1,111 @@
+<div class="shop checkout section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-12">
+                <div class="single-widget">
+                    <h2 class="p-0">Payments</h2>
+                    <div class="content">
+                        <div class="checkbox p-0">
+                            <label class="checkbox-inline" for="1"><input type="checkbox" selected="selected"> Credit/ Debit
+                                Cards</label>
+                        </div>
+                        <div class="single-widget payement">
+                            <div class="content">
+                                <img src="/assets/images/payment-method.png" alt="">
+                            </div>
+                        </div>
+                        <form class="register-form form row" [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group col-md-6">
+                                <label for="Name" class="">Name <span class="asterisk">*</span></label>
+                                <input class="form-control" type="text" formControlName="name" placeholder="Name"
+                                [ngClass]="{ 'is-invalid': isSubmit && f.name.errors }">
+                                <div *ngIf="isSubmit && f.name.errors" class="invalid-feedback">
+                                    <div *ngIf="f.name.errors.required">Required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cardNumber" class="">Card Number <span class="asterisk">*</span></label>
+                                <input class="form-control" type="text" maxlength="16" formControlName="cardNumber"
+                                    placeholder="1234123412341234"
+                                    [ngClass]="{ 'is-invalid': isSubmit && f.cardNumber.errors }">
+                                <div *ngIf="isSubmit && f.cardNumber.errors" class="invalid-feedback">
+                                    <div *ngIf="f.cardNumber.errors.required">Required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="Month" class="">Month <span class="asterisk">*</span></label>
+                                <select id="" class="form-control"  formControlName="month" class="form-control"
+                                [ngClass]="{ 'is-invalid': isSubmit && f.month.errors }" >
+                                    <option value="" disabled selected hidden>select month</option>
+                                    <option value="1">Jan</option>
+                                    <option value="2">Feb</option>
+                                    <option value="3">Mar</option>
+                                    <option value="4">Apr</option>
+                                    <option value="5">May</option>
+                                    <option value="6">Jun</option>
+                                    <option value="7">Jul</option>
+                                    <option value="8">Aug</option>
+                                    <option value="9">Sep</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
+                                </select>
+                                <div *ngIf="isSubmit && f.month.errors" class="invalid-feedback">
+                                    <div *ngIf="f.month.errors.required">Required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="Year" class="">Year <span class="asterisk">*</span></label>
+                                <select id="" class="form-control" formControlName="year" class="form-control"
+                                    [ngClass]="{ 'is-invalid': isSubmit && f.year.errors }" >
+                                    <option value="" disabled selected hidden>Select Year</option>
+                                    <option *ngFor="let year of years" value="{{year}}">
+                                        {{year}}
+                                    </option>
+                                </select>
+
+                                <div *ngIf="isSubmit && f.year.errors" class="invalid-feedback">
+                                    <div *ngIf="f.year.errors.required">Required</div>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="CVV" class="">CVV <span class="asterisk">*</span></label>
+                                <input class="form-control" type="text" formControlName="cvv" placeholder="123" maxlength="4"   
+                                [ngClass]="{ 'is-invalid': isSubmit && f.cvv.errors }" >
+
+                                <div *ngIf="isSubmit && f.cvv.errors" class="invalid-feedback">
+                                    <div *ngIf="f.cvv.errors.required">Required</div>
+                                </div>
+                            </div>
+                            <div class="single-widget get-button text-right p-0 pr-3 col-12">
+                                <div class="content">
+                                    <div class="button">
+                                        <button type="submit" class="btn">Place Order</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-12 err-msg">
+                            {{displayMessage}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="order-details">
+                    <div class="single-widget">
+                        <h2>CART TOTALS</h2>
+                        <div class="content">
+                            <ul class="p-0">
+                                <li>Sub Total<span>${{subTotal}}</span></li>
+                                <li>(+) Tax<span>${{tax}}</span></li>
+                                <li class="last">Total<span>${{total}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<section id="form"><!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form"><!--login form-->
+                    <h2>Login to your account</h2>
+                    <form [formGroup]="loginForm">
+                        <input type="email" placeholder="Email Address" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': loginSubmitted && lFields.email.errors }" />
+                        <div *ngIf="loginSubmitted && lFields.email.errors" class="invalid-feedback">
+                            <div *ngIf="lFields.email.errors.required">Email is required</div>
+                            <div *ngIf="lFields.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                        <input type="password"  placeholder="Password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': loginSubmitted && lFields.password.errors }" />
+                        <div *ngIf="loginSubmitted && lFields.password.errors" class="invalid-feedback">
+                            <div *ngIf="lFields.password.errors.required">Password is required</div>
+                            <div *ngIf="lFields.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>  
+                        <div class="err-msg">
+                            {{error}}
+                        </div>                      
+                        <button type="submit" class="btn btn-default" (click)="onLoginFormSubmit()">Login</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <h2 class="or">OR</h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="signup-form">
+                    <h2>New User Signup!</h2>
+                    <form [formGroup]="registerForm">
+                        <input type="text" placeholder="Name" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': rSubmitted && rFields.name.errors }" />
+                        <div *ngIf="rSubmitted && rFields.name.errors" class="invalid-feedback">
+                            <div *ngIf="rFields.name.errors.required">Name is required</div>
+                        </div>
+                        <input type="email" placeholder="Email Address" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': rSubmitted && rFields.email.errors }" />
+                        <div *ngIf="rSubmitted && rFields.email.errors" class="invalid-feedback">
+                            <div *ngIf="rFields.email.errors.required">Email is required</div>
+                            <div *ngIf="rFields.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                        <input type="password"  placeholder="Password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': rSubmitted && rFields.password.errors }" />
+                        <div *ngIf="rSubmitted && rFields.password.errors" class="invalid-feedback">
+                            <div *ngIf="rFields.password.errors.required">Password is required</div>
+                            <div *ngIf="rFields.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
+                        <button type="submit" (click)="onRegisterFormSubmit()" class="btn btn-default">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

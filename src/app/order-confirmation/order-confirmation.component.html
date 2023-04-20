@@ -1,0 +1,66 @@
+<section class="order-success text-center">
+    <div class="mb-4">
+        Order Placed Successfully.Order ID: {{orderId}} 
+    </div>
+</section>
+<section id="cart_items">
+    <div class="container">
+        <div class="table-responsive cart_info">
+            <table class="table table-condensed">
+                <thead>
+                    <tr class="cart_menu">
+                        <td class="image">Item</td>
+                        <td class="description"></td>
+                        <td class="price">Price</td>
+                        <td class="quantity">Quantity</td>
+                        <td class="total">Total</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cart of getCartItems">
+                        <td class="cart_product mr-0">
+                           <img class="product-image-summary" src="/assets/images/{{cart.image}}" alt="">
+                        </td>
+                        <td class="cart_description">
+                            <h4>{{cart.name| titlecase}}</h4>
+                        </td>
+                        <td class="cart_price">
+                            <p>${{cart.price}}</p>
+                        </td>
+                        <td class="cart_quantity">
+                            <p>{{cart.quantity}}</p>
+                        </td>
+                        <td class="cart_total">
+                            <p class="cart_total_price">${{cart.price * cart.quantity}}</p>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="4">&nbsp;</td>
+                        <td colspan="2">
+                            <table class="table table-condensed total-result">
+                                <tr>
+                                    <td>Cart Sub Total</td>
+                                    <td>${{subTotal}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tax</td>
+                                    <td>${{tax}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td><span>${{total}}</span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">&nbsp;</td>
+                        <td colspan="2">
+                            <button class="btn btn-primary btn-checkout" (click)="navigateToHome()">Home</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section> 

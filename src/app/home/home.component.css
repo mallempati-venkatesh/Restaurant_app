@@ -1,0 +1,113 @@
+.title {
+    color: #ff006e;
+}
+#advertisement {
+    padding-bottom: 25px;
+}
+
+#advertisement img {
+    width: 100%;
+}
+
+.pagination {
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding-left: 15px;
+}
+
+.pagination li:first-child a,
+.pagination li:first-child span {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: 0;
+}
+
+.pagination li:last-child a,
+.pagination li:last-child span {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.pagination .active a,
+.pagination .active span,
+.pagination .active a:hover,
+.pagination .active span:hover,
+.pagination .active a:focus,
+.pagination .active span:focus {
+    background-color: #ff006e;
+    border-color: #ff006e;
+    color: #FFFFFF;
+    cursor: default;
+    z-index: 2;
+}
+
+.pagination li a,
+.pagination li span {
+    background-color: #f0f0e9;
+    border: 0;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+    margin-right: 5px;
+    color: #000;
+}
+
+.pagination li a:hover {
+    background: #ff006e;
+    color: #fff;
+}
+.prod-name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+}
+.productinfo p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #696763;
+}
+
+.productinfo img {
+    width: 100%;
+    height:230px
+}
+
+.productinfo {
+    position: relative;
+}
+.single-products {
+    position: relative;
+
+}
+.product-display {
+    margin-right: 1%;
+}
+.btn-success {
+    background-color: #ff006e;
+    border-color: #ff006e;
+}
+.price {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+}
+.product-content {
+    margin-top: 5px;
+}
+.prd-container {
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.panel-title {
+    cursor: pointer;
+}
